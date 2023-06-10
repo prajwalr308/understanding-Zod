@@ -1,3 +1,5 @@
+// with interface
+
 interface User {
   id: number;
   name: string;
@@ -10,7 +12,8 @@ export const fetchUsersWithInterface = async () => {
   return user;
 };
 
-// write zod schema for user
+
+//with Zod
 import { z } from "zod";
 
 
@@ -22,7 +25,6 @@ const userSchema = z.array(
     })
   );
 
-//now assign the type of userSchema to User type userSchema should be an array
 
 type UserType = z.infer<typeof userSchema>;
 
