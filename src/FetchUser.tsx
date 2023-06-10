@@ -30,7 +30,7 @@ const FetchUsers = () => {
 
   if (userZodWorking)
     console.log(
-      "🚀 ~ file: FetchUser.tsx:20 ~ FetchUsers ~ userZodWorking:",
+      "🚀 ~ file: FetchUser.tsx:33 ~ FetchUsers ~ userZodWorking:",
       userZodWorking
     );
 
@@ -57,11 +57,11 @@ const FetchUsers = () => {
       <div>
         {userWithZod?.map((user) => (
           <div key={user.id}>
-            console.log("🚀 ~ file: FetchUser.tsx:44 ~ FetchUsers ~ id:", id)
             <h2>{user.name}</h2>
             <p>{user.email}</p>
           </div>
         ))}
+        <div>Error because of wrong zod schema</div>
       </div>
       <h1>Fetch Users with zod Working schema</h1>
       <div>
