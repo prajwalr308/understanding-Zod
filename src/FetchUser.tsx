@@ -40,6 +40,7 @@ const FetchUsers = () => {
         onClick={() => {
           queryClient.invalidateQueries("user");
           queryClient.invalidateQueries("userZod");
+          queryClient.invalidateQueries("userZodWorking");
         }}
       >
         Invalidate
