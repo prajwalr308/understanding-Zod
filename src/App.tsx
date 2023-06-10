@@ -1,4 +1,4 @@
-import "./App.css";
+
 import FetchUsers from "./FetchUser";
 
 function App() {

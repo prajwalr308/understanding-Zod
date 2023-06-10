@@ -45,33 +45,33 @@ const FetchUsers = () => {
         Invalidate
       </button>
       <h1>Fetch Users with interface</h1>
-      <div>
+      <ul>
         {userWithInterface?.map((user) => (
-          <div key={user.id}>
+          <li key={user.id}>
             <h2>{user.name}</h2>
             <p>{user.email}</p>
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
       <h1>Fetch Users with zod error schema</h1>
-      <div>
+      <ul>
         {userWithZod?.map((user) => (
-          <div key={user.id}>
+          <li key={user.id}>
             <h2>{user.name}</h2>
             <p>{user.email}</p>
-          </div>
+          </li>
         ))}
-        <div>Error because of wrong zod schema</div>
-      </div>
+        <li>Error because of wrong zod schema</li>
+      </ul>
       <h1>Fetch Users with zod Working schema</h1>
-      <div>
+      <ul>
         {userZodWorking?.map((user) => (
-          <div key={user.id}>
+          <li key={user.id}>
             <h2>{user.name}</h2>
             <p>{user.email}</p>
-          </div>
+          </li>
         ))}
-      </div>
+      </ul>
     </div>
   );
 };
